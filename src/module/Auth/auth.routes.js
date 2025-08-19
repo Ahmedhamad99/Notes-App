@@ -6,8 +6,6 @@ import {resetPassword} from "./controller/resetPassword.controller.js";
 import { forgotPassword } from "./controller/forgetPassword.controller.js";
 const router = express.Router();
 
-// router.post("/login", login);
-// router.post("/logout", logout);
 
 router.post("/register",register)
 router.post("/login",login);

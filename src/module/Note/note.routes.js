@@ -9,7 +9,10 @@ const router = express.Router();
 
 router.route("/").post(createOneNote).get(getAllNotes);
 
-router.route("/:id").get(getNoteByid).delete(DeleteOneNote).patch(updateOneById)
+router.route("/:id")
+       .get(getNoteByid)
+       .delete(DeleteOneNote)
+       .patch(updateOneById)
 
 
 export default router;

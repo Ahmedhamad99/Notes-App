@@ -61,11 +61,11 @@ export const deleteNote = {
   args: { id: { type: new GraphQLNonNull(GraphQLID) } },
   resolve: async (_, { id }, context) => {
     if (!context.user) throw new AppError("Unauthorized", 401);
-
+    console.log(id)
     const note = await Note.findOneAndDelete({
-      _id: id,
-      ownerId: context.user.sub,
+      _id: id
     });
+    console.log("note", note)
 
     if (!note) throw new AppError("Note not found or not authorized", 404);
     return "Note deleted successfully";

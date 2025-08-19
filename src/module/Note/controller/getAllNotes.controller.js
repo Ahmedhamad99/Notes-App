@@ -14,7 +14,7 @@ const getAllNotes = asyncHandler(async (req,res,next)=>{
 
   // pagination
   const notes = await Note.find({ ownerId: req.user.sub })
-    .populate("owner", "email profilePic")
+    .populate("ownerId","email profilePic")
     .sort({ createdAt: -1 })
     .skip(skip)
     .limit(limit);
