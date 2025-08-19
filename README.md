@@ -46,7 +46,7 @@ A full-featured Notes application with user authentication, REST and GraphQL API
 
 1. **Clone the repository:**
    ```bash
-   git clone <repo-url>
+   git clone https://github.com/Ahmedhamad99/Notes-App.git
    cd Notes-App
    ```
 
@@ -61,6 +61,8 @@ A full-featured Notes application with user authentication, REST and GraphQL API
 4. **Start the server:**
    ```bash
    npm start
+   or
+   nodemon start
    ```
 
    The server will run on the port specified in your `.env` (default: 3000).
