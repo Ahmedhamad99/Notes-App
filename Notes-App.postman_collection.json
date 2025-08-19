@@ -1,0 +1,701 @@
+{
+	"info": {
+		"_postman_id": "53d845b0-12e1-43aa-a53b-e1a8bf910aac",
+		"name": "Notes-App",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "44056847"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"adm@gmail.com\",\r\n    \"password\":\"1234567\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/auth/register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"adm@gmail.com\",\r\n    \"password\":\"1234567\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateNote",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OGE0ZTc2NTU3MTg4N2RlOThhYzA2NmMiLCJlbWFpbCI6ImFkbUBnbWFpbC5jb20iLCJpYXQiOjE3NTU2Mzc2NzEsImV4cCI6MTc1NTY0MTI3MSwiaXNzIjoic21hcnQtbm90ZS1hcGkiLCJqdGkiOiIyYjAwMTRiOC02ZTkzLTRkMDUtOWZmOC1jMmRkMzQ5NDY4NjcifQ.gFVq8nbcrZ0O-_6aNMFhK4QFLV4LFGYWWxJexLmjXClSKuE6s--g0I00_QAxGZtDoRCtfDooqsZv5yYgwKYKCobQ5eFYsW6Fms605bMHowItJCWRWtl1Ci6mFKjeuTsKzpt7n0ce5zSozz3-gjW03SO6eJL1LUY4P3Hn-OaqBxsB8v1GhFQjShMqQI_rGNZXrpAnJTd4r6TeQAIP1JgLRjH-JRRVnXUtKFRTduIdXAMQuI0FbBEZdtu2vkCmVoU9ui199kEV1XsxtN4kTF6qEIL-WdMTNiBqvjjoTlug9GGZIDnRT20JLUTP8aRbl8Vx8aqsgsRnsitEGdlr5_16cw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"C++\",\r\n    \"content\":\"it is good\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/notes-rest/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"notes-rest",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllNotes",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OGE0ZTc2NTU3MTg4N2RlOThhYzA2NmMiLCJlbWFpbCI6ImFkbUBnbWFpbC5jb20iLCJpYXQiOjE3NTU2MzgwNTMsImV4cCI6MTc1NTY0MTY1MywiaXNzIjoic21hcnQtbm90ZS1hcGkiLCJqdGkiOiI4ZDcyMmVhYi00MWE3LTQ3ZjctOGM2OC0yOTU1ODJjYTIzMTkifQ.m6YNOVZGb0RPQO1SNM4yLmJh-ZSZZlJrl_fQ42sRPz79cSGGoxxLW9ELYPGpzK4IPArIJu1rxtTLtdUpi4mkuN8p4yBAnCkDPP7Cr50Civptaf1ZTCCUdS3EmxcJSYonEUD-Rt4YKovic5xwAXl7sUbMsOIfu7psZlSU4zhviqL5fYIBs2lWgxoVwlRBSH-1TL_Z5EWom54oe8DMqAcWyIlQ095fdQqr8M-ofGohF4j1rDVzzhxHGq_CuC2USM5FXo2aks9NHO1u79GvZrfalbY0qVkaKn-lGN46pHwofBy6XR0kmG2ihPnU0_LWdkDKA1bVohfkSbpuHW89iISfaA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/notes-rest/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"notes-rest",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetOneNoteById",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OGE0ZTc2NTU3MTg4N2RlOThhYzA2NmMiLCJlbWFpbCI6ImFkbUBnbWFpbC5jb20iLCJpYXQiOjE3NTU2MzgwNTMsImV4cCI6MTc1NTY0MTY1MywiaXNzIjoic21hcnQtbm90ZS1hcGkiLCJqdGkiOiI4ZDcyMmVhYi00MWE3LTQ3ZjctOGM2OC0yOTU1ODJjYTIzMTkifQ.m6YNOVZGb0RPQO1SNM4yLmJh-ZSZZlJrl_fQ42sRPz79cSGGoxxLW9ELYPGpzK4IPArIJu1rxtTLtdUpi4mkuN8p4yBAnCkDPP7Cr50Civptaf1ZTCCUdS3EmxcJSYonEUD-Rt4YKovic5xwAXl7sUbMsOIfu7psZlSU4zhviqL5fYIBs2lWgxoVwlRBSH-1TL_Z5EWom54oe8DMqAcWyIlQ095fdQqr8M-ofGohF4j1rDVzzhxHGq_CuC2USM5FXo2aks9NHO1u79GvZrfalbY0qVkaKn-lGN46pHwofBy6XR0kmG2ihPnU0_LWdkDKA1bVohfkSbpuHW89iISfaA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/notes-rest/68a4e833571887de98ac0673",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"notes-rest",
+						"68a4e833571887de98ac0673"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateOneById",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OGE0ZTc2NTU3MTg4N2RlOThhYzA2NmMiLCJlbWFpbCI6ImFkbUBnbWFpbC5jb20iLCJpYXQiOjE3NTU2MzgwNTMsImV4cCI6MTc1NTY0MTY1MywiaXNzIjoic21hcnQtbm90ZS1hcGkiLCJqdGkiOiI4ZDcyMmVhYi00MWE3LTQ3ZjctOGM2OC0yOTU1ODJjYTIzMTkifQ.m6YNOVZGb0RPQO1SNM4yLmJh-ZSZZlJrl_fQ42sRPz79cSGGoxxLW9ELYPGpzK4IPArIJu1rxtTLtdUpi4mkuN8p4yBAnCkDPP7Cr50Civptaf1ZTCCUdS3EmxcJSYonEUD-Rt4YKovic5xwAXl7sUbMsOIfu7psZlSU4zhviqL5fYIBs2lWgxoVwlRBSH-1TL_Z5EWom54oe8DMqAcWyIlQ095fdQqr8M-ofGohF4j1rDVzzhxHGq_CuC2USM5FXo2aks9NHO1u79GvZrfalbY0qVkaKn-lGN46pHwofBy6XR0kmG2ihPnU0_LWdkDKA1bVohfkSbpuHW89iISfaA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"Java\",\r\n    \"content\":\"java is good\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/notes-rest/68a4e833571887de98ac0673",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"notes-rest",
+						"68a4e833571887de98ac0673"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteOneById",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OGE0ZTc2NTU3MTg4N2RlOThhYzA2NmMiLCJlbWFpbCI6ImFkbUBnbWFpbC5jb20iLCJpYXQiOjE3NTU2MzgwNTMsImV4cCI6MTc1NTY0MTY1MywiaXNzIjoic21hcnQtbm90ZS1hcGkiLCJqdGkiOiI4ZDcyMmVhYi00MWE3LTQ3ZjctOGM2OC0yOTU1ODJjYTIzMTkifQ.m6YNOVZGb0RPQO1SNM4yLmJh-ZSZZlJrl_fQ42sRPz79cSGGoxxLW9ELYPGpzK4IPArIJu1rxtTLtdUpi4mkuN8p4yBAnCkDPP7Cr50Civptaf1ZTCCUdS3EmxcJSYonEUD-Rt4YKovic5xwAXl7sUbMsOIfu7psZlSU4zhviqL5fYIBs2lWgxoVwlRBSH-1TL_Z5EWom54oe8DMqAcWyIlQ095fdQqr8M-ofGohF4j1rDVzzhxHGq_CuC2USM5FXo2aks9NHO1u79GvZrfalbY0qVkaKn-lGN46pHwofBy6XR0kmG2ihPnU0_LWdkDKA1bVohfkSbpuHW89iISfaA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/notes-rest/68a4e833571887de98ac0673",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"notes-rest",
+						"68a4e833571887de98ac0673"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "forgetPassword",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"ahaahmn12345678@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/auth/forgotPassword",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"auth",
+						"forgotPassword"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ResetPassword",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"ahaahmn12345678@gmail.com\",\r\n    \"otp\":\"922365\",\r\n    \"newPassword\":\"1234567\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/auth/resetPassword",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"auth",
+						"resetPassword"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OGE0ZTc2NTU3MTg4N2RlOThhYzA2NmMiLCJlbWFpbCI6ImFkbUBnbWFpbC5jb20iLCJpYXQiOjE3NTU2MzgwNTMsImV4cCI6MTc1NTY0MTY1MywiaXNzIjoic21hcnQtbm90ZS1hcGkiLCJqdGkiOiI4ZDcyMmVhYi00MWE3LTQ3ZjctOGM2OC0yOTU1ODJjYTIzMTkifQ.m6YNOVZGb0RPQO1SNM4yLmJh-ZSZZlJrl_fQ42sRPz79cSGGoxxLW9ELYPGpzK4IPArIJu1rxtTLtdUpi4mkuN8p4yBAnCkDPP7Cr50Civptaf1ZTCCUdS3EmxcJSYonEUD-Rt4YKovic5xwAXl7sUbMsOIfu7psZlSU4zhviqL5fYIBs2lWgxoVwlRBSH-1TL_Z5EWom54oe8DMqAcWyIlQ095fdQqr8M-ofGohF4j1rDVzzhxHGq_CuC2USM5FXo2aks9NHO1u79GvZrfalbY0qVkaKn-lGN46pHwofBy6XR0kmG2ihPnU0_LWdkDKA1bVohfkSbpuHW89iISfaA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/user/logout",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"user",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "upload-picture",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OGE0YmU5N2VmOTFmOWU4NTJhYmE1MjciLCJlbWFpbCI6ImFoYWFobW4xMjM0NTY3OEBnbWFpbC5jb20iLCJpYXQiOjE3NTU2Mzg3NzAsImV4cCI6MTc1NTY0MjM3MCwiaXNzIjoic21hcnQtbm90ZS1hcGkiLCJqdGkiOiI0NWFmZTQ5Mi0zNmIyLTQwNTEtYWE2Zi05YjIyYzJmYTMyNzcifQ.k8xrGY3tXQ0D59WW0TDVqpanTV1Vgk2Ko5kNn1-I-8gJA_fGb0cOdTd5k8z6c3Cg9B_Ez1Gde9Q0uh1k4C5TgGbAMvtddfQL3fRbXvMh1x5BAMNDoBuIN7E3740fuGF7Zvi3HvIme-g3TjRD3oCkQiFr8oj9Auyop1bzdoTa7p8Jm4J8UR1855UAc-H07rNpuAyyndlbi_ly3bXhduuTO2UbSo60r740eXUG6J8mvX24yeV7yJSj7smpWwRwxyBlRh866HWNED82ATmzjKh0_ZI7LSqa9skb5sSOjC25FDi-cYiKrn69dSBDquOvab4y2HXkDtAE3WuEtSlsf3uCOQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OGE0YmU5N2VmOTFmOWU4NTJhYmE1MjciLCJlbWFpbCI6ImFoYWFobW4xMjM0NTY3OEBnbWFpbC5jb20iLCJpYXQiOjE3NTU2Mzg3NzAsImV4cCI6MTc1NTY0MjM3MCwiaXNzIjoic21hcnQtbm90ZS1hcGkiLCJqdGkiOiI0NWFmZTQ5Mi0zNmIyLTQwNTEtYWE2Zi05YjIyYzJmYTMyNzcifQ.k8xrGY3tXQ0D59WW0TDVqpanTV1Vgk2Ko5kNn1-I-8gJA_fGb0cOdTd5k8z6c3Cg9B_Ez1Gde9Q0uh1k4C5TgGbAMvtddfQL3fRbXvMh1x5BAMNDoBuIN7E3740fuGF7Zvi3HvIme-g3TjRD3oCkQiFr8oj9Auyop1bzdoTa7p8Jm4J8UR1855UAc-H07rNpuAyyndlbi_ly3bXhduuTO2UbSo60r740eXUG6J8mvX24yeV7yJSj7smpWwRwxyBlRh866HWNED82ATmzjKh0_ZI7LSqa9skb5sSOjC25FDi-cYiKrn69dSBDquOvab4y2HXkDtAE3WuEtSlsf3uCOQ",
+						"name": "authorization",
+						"type": "text"
+					},
+					{
+						"key": "Cache-Control",
+						"value": "no-cache",
+						"name": "cache-control",
+						"type": "text"
+					},
+					{
+						"key": "Postman-Token",
+						"value": "<calculated when request is sent>",
+						"name": "postman-token",
+						"type": "text"
+					},
+					{
+						"key": "Host",
+						"value": "<calculated when request is sent>",
+						"name": "host",
+						"type": "text"
+					},
+					{
+						"key": "User-Agent",
+						"value": "PostmanRuntime/7.39.1",
+						"name": "user-agent",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"name": "accept",
+						"type": "text"
+					},
+					{
+						"key": "Accept-Encoding",
+						"value": "gzip, deflate, br",
+						"name": "accept-encoding",
+						"type": "text"
+					},
+					{
+						"key": "Connection",
+						"value": "keep-alive",
+						"name": "connection",
+						"type": "text"
+					},
+					{
+						"key": "profilePic",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "profilePic",
+							"type": "file",
+							"src": "c:\\Users\\Hp\\Pictures\\1_1.JPG"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/user/upload-profile-pec",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"user",
+						"upload-profile-pec"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createNote-graph",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OGE0YmU5N2VmOTFmOWU4NTJhYmE1MjciLCJlbWFpbCI6ImFoYWFobW4xMjM0NTY3OEBnbWFpbC5jb20iLCJpYXQiOjE3NTU2Mzg3NzAsImV4cCI6MTc1NTY0MjM3MCwiaXNzIjoic21hcnQtbm90ZS1hcGkiLCJqdGkiOiI0NWFmZTQ5Mi0zNmIyLTQwNTEtYWE2Zi05YjIyYzJmYTMyNzcifQ.k8xrGY3tXQ0D59WW0TDVqpanTV1Vgk2Ko5kNn1-I-8gJA_fGb0cOdTd5k8z6c3Cg9B_Ez1Gde9Q0uh1k4C5TgGbAMvtddfQL3fRbXvMh1x5BAMNDoBuIN7E3740fuGF7Zvi3HvIme-g3TjRD3oCkQiFr8oj9Auyop1bzdoTa7p8Jm4J8UR1855UAc-H07rNpuAyyndlbi_ly3bXhduuTO2UbSo60r740eXUG6J8mvX24yeV7yJSj7smpWwRwxyBlRh866HWNED82ATmzjKh0_ZI7LSqa9skb5sSOjC25FDi-cYiKrn69dSBDquOvab4y2HXkDtAE3WuEtSlsf3uCOQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"query\": \"mutation { createNote(title:\\\"Java and C++\\\", content:\\\"Testing GraphQL create\\\") { id title content createdAt } }\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/notes-graph",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"notes-graph"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getNotById-graph",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OGE0YmU5N2VmOTFmOWU4NTJhYmE1MjciLCJlbWFpbCI6ImFoYWFobW4xMjM0NTY3OEBnbWFpbC5jb20iLCJpYXQiOjE3NTU2Mzg3NzAsImV4cCI6MTc1NTY0MjM3MCwiaXNzIjoic21hcnQtbm90ZS1hcGkiLCJqdGkiOiI0NWFmZTQ5Mi0zNmIyLTQwNTEtYWE2Zi05YjIyYzJmYTMyNzcifQ.k8xrGY3tXQ0D59WW0TDVqpanTV1Vgk2Ko5kNn1-I-8gJA_fGb0cOdTd5k8z6c3Cg9B_Ez1Gde9Q0uh1k4C5TgGbAMvtddfQL3fRbXvMh1x5BAMNDoBuIN7E3740fuGF7Zvi3HvIme-g3TjRD3oCkQiFr8oj9Auyop1bzdoTa7p8Jm4J8UR1855UAc-H07rNpuAyyndlbi_ly3bXhduuTO2UbSo60r740eXUG6J8mvX24yeV7yJSj7smpWwRwxyBlRh866HWNED82ATmzjKh0_ZI7LSqa9skb5sSOjC25FDi-cYiKrn69dSBDquOvab4y2HXkDtAE3WuEtSlsf3uCOQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n{\r\n  \"query\": \"{ note(id:\\\"68a4ee1b75ecbe68b4b49a2a\\\") { id title content owner { email } createdAt } }\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/notes-graph",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"notes-graph"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllNotes-graph",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OGE0YmU5N2VmOTFmOWU4NTJhYmE1MjciLCJlbWFpbCI6ImFoYWFobW4xMjM0NTY3OEBnbWFpbC5jb20iLCJpYXQiOjE3NTU2Mzg3NzAsImV4cCI6MTc1NTY0MjM3MCwiaXNzIjoic21hcnQtbm90ZS1hcGkiLCJqdGkiOiI0NWFmZTQ5Mi0zNmIyLTQwNTEtYWE2Zi05YjIyYzJmYTMyNzcifQ.k8xrGY3tXQ0D59WW0TDVqpanTV1Vgk2Ko5kNn1-I-8gJA_fGb0cOdTd5k8z6c3Cg9B_Ez1Gde9Q0uh1k4C5TgGbAMvtddfQL3fRbXvMh1x5BAMNDoBuIN7E3740fuGF7Zvi3HvIme-g3TjRD3oCkQiFr8oj9Auyop1bzdoTa7p8Jm4J8UR1855UAc-H07rNpuAyyndlbi_ly3bXhduuTO2UbSo60r740eXUG6J8mvX24yeV7yJSj7smpWwRwxyBlRh866HWNED82ATmzjKh0_ZI7LSqa9skb5sSOjC25FDi-cYiKrn69dSBDquOvab4y2HXkDtAE3WuEtSlsf3uCOQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"query\": \"{ notes(limit:5) { id title content createdAt } }\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/notes-graph",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"notes-graph"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateOnById-graph",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OGE0YmU5N2VmOTFmOWU4NTJhYmE1MjciLCJlbWFpbCI6ImFoYWFobW4xMjM0NTY3OEBnbWFpbC5jb20iLCJpYXQiOjE3NTU2Mzg3NzAsImV4cCI6MTc1NTY0MjM3MCwiaXNzIjoic21hcnQtbm90ZS1hcGkiLCJqdGkiOiI0NWFmZTQ5Mi0zNmIyLTQwNTEtYWE2Zi05YjIyYzJmYTMyNzcifQ.k8xrGY3tXQ0D59WW0TDVqpanTV1Vgk2Ko5kNn1-I-8gJA_fGb0cOdTd5k8z6c3Cg9B_Ez1Gde9Q0uh1k4C5TgGbAMvtddfQL3fRbXvMh1x5BAMNDoBuIN7E3740fuGF7Zvi3HvIme-g3TjRD3oCkQiFr8oj9Auyop1bzdoTa7p8Jm4J8UR1855UAc-H07rNpuAyyndlbi_ly3bXhduuTO2UbSo60r740eXUG6J8mvX24yeV7yJSj7smpWwRwxyBlRh866HWNED82ATmzjKh0_ZI7LSqa9skb5sSOjC25FDi-cYiKrn69dSBDquOvab4y2HXkDtAE3WuEtSlsf3uCOQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"query\": \"mutation { updateNote(id:\\\"68a4edfc75ecbe68b4b49a24\\\", title:\\\"Node.js\\\") { id title content } }\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/notes-graph",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"notes-graph"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteOnebyId-graph",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteOneById-graph",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OGE0YmU5N2VmOTFmOWU4NTJhYmE1MjciLCJlbWFpbCI6ImFoYWFobW4xMjM0NTY3OEBnbWFpbC5jb20iLCJpYXQiOjE3NTU2NDA3ODIsImV4cCI6MTc1NTY0NDM4MiwiaXNzIjoic21hcnQtbm90ZS1hcGkiLCJqdGkiOiJlNWU3ODRkNC0zZmIzLTQyMWUtOWRlNS1hODdmZDhjMGJlZDUifQ.O-0vl6jCUluF_qxHigI-zX5eoCmo-0903yquLuoMaWIeQvMua08cptoPkPzdSq5T-xMc94I0GmGU4Oht8Zxl2ethHx4c6z1Bhw8w0iSYPkv_PRVMYGyB-c-jeLKMkU0usRuwytiyDY30dKejLueM9Of0pbA7CfHh89iuAuZ3qlyfMbpe4qELbeKVpYyiIY7QlJ7_vYkw0VLint0ue_rmExH4Aqr6FtMfehBgDnqVachMJipYQw2qqCIiURyIlC4C95yNylb1YfWvcnomTq6NvJexBwz5nRd5AgHc0o4UUnaNISre4Y2CLb0NOxzH5ZDCyTu4201aGUbcX4tifQdfNg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"query\": \"mutation { deleteNote(id:\\\"68a4c9d077996f44d280937d\\\") }\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/notes-graph/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"notes-graph",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
